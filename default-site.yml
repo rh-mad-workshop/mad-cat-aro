@@ -1,6 +1,6 @@
 ---
 site:
-  title: Modern App Dev Roadshow - Cloud Architect Track for ROSA
+  title: Modern App Dev Roadshow - Cloud Architect Track for ARO
   start_page: modules::index.adoc
 
 content:
@@ -11,7 +11,7 @@ content:
 
 asciidoc:
   attributes:
-    lab_name: Modern App Dev Roadshow - Cloud Architect Track for ROSA
+    lab_name: Modern App Dev Roadshow - Cloud Architect Track for ARO
     release-version: master
     page-pagination: true
   extensions:
