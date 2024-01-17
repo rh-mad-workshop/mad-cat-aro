@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Modern App Dev Roadshow - Cloud Architect Track for ARO</title>
+    <link rel="prev" href="lab_2_openshift_gitops.html">
+    <link rel="next" href="lab_4_resilient_app.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://developers.redhat.com" target="_blank"><img
+          src="../../_/img/header_logo.png" height="40px" alt="Red Hat Developer Program"></a>
+      <a class="navbar-item" href="../..">Modern App Dev Roadshow - Cloud Architect Track for ARO</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Books</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">CheatSheets</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">CheatSheet A</a>
+            <a class="navbar-item" href="#">CheatSheet B</a>
+            <a class="navbar-item" href="#">CheatSheet C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Upcoming Events</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Event A</a>
+            <a class="navbar-item" href="#">Event B</a>
+            <a class="navbar-item" href="#">Event C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">More Tutorials</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Tutorial A</a>
+            <a class="navbar-item" href="#">Tutorial B</a>
+            <a class="navbar-item" href="#">Tutorial C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="modules" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html" class=" query-params-link">Modern App Dev Roadshow - Cloud Architect Track for ARO</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../100-setup/lab_1_environment.html">Explore the environment</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../100-setup/lab_2_access_cluster.html">Access your ARO cluster</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_1_cluster_upgrades.html">Upgrade your ARO cluster</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_2_managing_worker_nodes.html">Managing Worker Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_3_autoscaling.html">Autoscale your ARO Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_4_labeling_nodes.html">Labeling your Worker Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_5_observability.html">Configure Red Hat OpenShift Logging with Azure Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lab_1_deploy_app.html">Deploy an application with Azure Database</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lab_2_openshift_gitops.html">Deploy an application with Red Hat OpenShift GitOps</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="lab_3_network_policy.html">Secure your applications with Network Policies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lab_4_resilient_app.html">Make your application resilient</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../400-service-mesh/lab_1_service_mesh_introduction.html">Service Mesh Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../400-service-mesh/lab_2_service_mesh_deploy_operator.html">Install Service Mesh Operator</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../400-service-mesh/lab_3_service_mesh_deploy_control_plane.html">Deploy Service Mesh Control Plane</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../400-service-mesh/lab_4_service_mesh_deploy_app.html">Deploy a Service Mesh example application</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../400-service-mesh/lab_5_service_mesh_weighted_routing.html">Set up Service Mesh Weighted Routing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../400-service-mesh/lab_6_service_mesh_observe.html">Configure and observe Service Mesh traffic</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../conclusion.html">Conclusion &amp; What&#8217;s Next</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Modern App Dev Roadshow - Cloud Architect Track for ARO</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Modern App Dev Roadshow - Cloud Architect Track for ARO</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Modern App Dev Roadshow - Cloud Architect Track for ARO</a></li>
+    <li><a href="lab_3_network_policy.html">Secure your applications with Network Policies</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///antora/content/modules/ROOT/pages/300-apps/lab_3_network_policy.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<article class="doc">
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>NetworkPolicies are used to control and secure communication between pods within a cluster. They provide a declarative approach to define and enforce network traffic rules, allowing you to specify the desired network behavior. By using NetworkPolicies, you can enhance the overall security of your applications by isolating and segmenting different components within the cluster. These policies enable fine-grained control over network access, allowing you to define ingress and egress rules based on criteria such as IP addresses, ports, and pod selectors.</p>
+</div>
+<div class="paragraph">
+<p>For this module we will be applying networkpolices to the previously created 'microsweeper-ex' namespace and using the 'microsweeper' app to test these policies. In addition, we will deploy two new applications to test against the 'microsweeper' app.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_applying_network_policies"><a class="anchor" href="#_applying_network_policies"></a>Applying Network Policies</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First, let&#8217;s create a new project for us to deploy a new test application. To do so, run the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh"> oc new-project networkpolicy-test</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Next, we will create a new application that will allow us to test connectivity to the microsweeper application. To do so, run the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">cat &lt;&lt; EOF | oc apply -f -
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: networkpolicy-pod
+  namespace: networkpolicy-test
+  labels:
+    app: networkpolicy
+spec:
+  securityContext:
+    allowPrivilegeEscalation: false
+  containers:
+    - name: networkpolicy-pod
+      image: registry.access.redhat.com/ubi9/ubi-minimal
+      command: ["sleep", "infinity"]
+EOF</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You may ignore any warnings you may see about PodSecurity violations.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Now we will change to the microsweeper-ex project to start applying the network policies</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh"> oc project microsweeper-ex</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Fetch the IP address of the <code>microsweeper</code> Pod</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">MS_IP=$(oc -n microsweeper-ex get pod -l \
+  "app.kubernetes.io/name=microsweeper-appservice" \
+  -o jsonpath="{.items[0].status.podIP}")
+echo $MS_IP</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-text hljs" data-lang="text">10.128.2.242</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Now, let&#8217;s validate that the <code>networkpolicy-pod</code> can access the <code>microsweeper</code> pod. By default, ARO does not implement any NetworkPolicy, so we should be able to easily verify that we can access the microsweeper application. To test this, let&#8217;s run the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">oc -n networkpolicy-test exec -ti pod/networkpolicy-pod -- curl $MS_IP:8080 | head</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-texinfo hljs" data-lang="texinfo">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Microsweeper&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/main.css"&gt;
+    &lt;script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>While ARO doesn&#8217;t block inter-project pod traffic by default, it is a common use case to not allow pods to cross communicate between projects (namespaces). This can be done by a fairly simple NetworkPolicy.</p>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>This Network Policy will restrict ingress to the pods in the project <code>microsweeper-ex</code> to only allow traffic from the OpenShift IngressController and only on port 8080.</p>
+</div>
+</div>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">cat &lt;&lt; EOF | oc apply -f -
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-from-openshift-ingress
+  namespace: microsweeper-ex
+spec:
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          network.openshift.io/policy-group: ingress
+  podSelector: {}
+  policyTypes:
+  - Ingress
+EOF</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-text hljs" data-lang="text">networkpolicy.networking.k8s.io/allow-from-openshift-ingress created</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Now that we&#8217;ve implemented that NetworkPolicy, let&#8217;s try to access the <code>microsweeper</code> pod from the <code>networkpolicy-pod</code> pod again. To do so, run the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">oc -n networkpolicy-test exec -ti pod/networkpolicy-pod -- curl $MS_IP:8080 | head</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This time it should fail to connect - it will just sit there.
+Hit Ctrl-C to avoid having to wait until a timeout.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you have your browser still open to the microsweeper app, you can refresh and see that you can still access it.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>In other cases, you may want to allow your application to be accessible to only <em>certain</em> namespaces. In this example, let&#8217;s allow access to just your <code>microsweeper</code> application from only the <code>networkpolicy-pod</code> in the <code>networkpolicy-test</code> namespace using a label selector. To do so, run the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">cat &lt;&lt;EOF | oc apply -f -
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-networkpolicy-pod-ap
+  namespace: microsweeper-ex
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: microsweeper-appservice
+  ingress:
+    - from:
+      - namespaceSelector:
+          matchLabels:
+            kubernetes.io/metadata.name: networkpolicy-test
+        podSelector:
+          matchLabels:
+            app: networkpolicy
+EOF</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-text hljs" data-lang="text">networkpolicy.networking.k8s.io/allow-networkpolicy-pod-ap created</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Now, let&#8217;s check to see if <code>networkpolicy-pod</code> can access the pod. To do so, run the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">oc -n networkpolicy-test exec -ti pod/networkpolicy-pod -- curl $MS_IP:8080 | head</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-text hljs" data-lang="text">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Microsweeper&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/main.css"&gt;
+    &lt;script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Now, let&#8217;s try a different pod (with a different label) in the <code>networkpolicy-test</code> namespace. Let&#8217;s create a new pod called <code>new-test</code>. To do so, run the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">cat &lt;&lt; EOF | oc apply -f -
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: new-test
+  namespace: networkpolicy-test
+  labels:
+    app: new-test
+spec:
+  securityContext:
+    allowPrivilegeEscalation: false
+  containers:
+    - name: new-test
+      image: registry.access.redhat.com/ubi9/ubi-minimal
+      command: ["sleep", "infinity"]
+EOF</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Again you may ignore any PodSecurity violation warnings you may see.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Now, let&#8217;s try to curl the <code>microsweeper</code> application by running the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">oc -n networkpolicy-test exec -ti pod/new-test -- curl $MS_IP:8080 | head</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will fail with a timeout again.
+Hit Ctrl-C to avoid waiting for a timeout.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>To learn more about configuring NetworkPolicy objects, visit the <a href="https://docs.openshift.com/container-platform/4.13/networking/network_policy/about-network-policy.html" target="_blank" rel="noopener">Red Hat documentation on NetworkPolicy</a>. Interested in creating a set of default NetworkPolicy objects for new projects? Read more at the <a href="https://docs.openshift.com/container-platform/4.13/networking/network_policy/default-network-policy.html" target="_blank" rel="noopener">Red Hat documentation on modifying the default project template</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here you learned:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Network Policies are a powerful way to apply zero-trust networking patterns.</p>
+</li>
+<li>
+<p>Access to pods can be restricted to other Pods, Namespaces, or other labels.</p>
+</li>
+<li>
+<p>Access can be completely denied, allowed, or set to particular ports or services.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="lab_2_openshift_gitops.html" class="query-params-link">Deploy an application with Red Hat OpenShift GitOps</a></span>
+  <span class="next"><a href="lab_4_resilient_app.html" class="query-params-link">Make your application resilient</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <a class="rhd-logo" href="https://developers.redhat.com" target="_blank"></div>
+</footer>
+<script src="../../_/js/vendor/clipboard.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

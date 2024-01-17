@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Modern App Dev Roadshow - Cloud Architect Track for ARO</title>
+    <link rel="prev" href="lab_1_environment.html">
+    <link rel="next" href="../200-ops/lab_1_cluster_upgrades.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://developers.redhat.com" target="_blank"><img
+          src="../../_/img/header_logo.png" height="40px" alt="Red Hat Developer Program"></a>
+      <a class="navbar-item" href="../..">Modern App Dev Roadshow - Cloud Architect Track for ARO</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Books</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">CheatSheets</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">CheatSheet A</a>
+            <a class="navbar-item" href="#">CheatSheet B</a>
+            <a class="navbar-item" href="#">CheatSheet C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Upcoming Events</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Event A</a>
+            <a class="navbar-item" href="#">Event B</a>
+            <a class="navbar-item" href="#">Event C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">More Tutorials</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Tutorial A</a>
+            <a class="navbar-item" href="#">Tutorial B</a>
+            <a class="navbar-item" href="#">Tutorial C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="modules" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html" class=" query-params-link">Modern App Dev Roadshow - Cloud Architect Track for ARO</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lab_1_environment.html">Explore the environment</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="lab_2_access_cluster.html">Access your ARO cluster</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_1_cluster_upgrades.html">Upgrade your ARO cluster</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_2_managing_worker_nodes.html">Managing Worker Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_3_autoscaling.html">Autoscale your ARO Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_4_labeling_nodes.html">Labeling your Worker Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_5_observability.html">Configure Red Hat OpenShift Logging with Azure Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../300-apps/lab_1_deploy_app.html">Deploy an application with Azure Database</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../300-apps/lab_2_openshift_gitops.html">Deploy an application with Red Hat OpenShift GitOps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../300-apps/lab_3_network_policy.html">Secure your applications with Network Policies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../300-apps/lab_4_resilient_app.html">Make your application resilient</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../400-service-mesh/lab_1_service_mesh_introduction.html">Service Mesh Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../400-service-mesh/lab_2_service_mesh_deploy_operator.html">Install Service Mesh Operator</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../400-service-mesh/lab_3_service_mesh_deploy_control_plane.html">Deploy Service Mesh Control Plane</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../400-service-mesh/lab_4_service_mesh_deploy_app.html">Deploy a Service Mesh example application</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../400-service-mesh/lab_5_service_mesh_weighted_routing.html">Set up Service Mesh Weighted Routing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../400-service-mesh/lab_6_service_mesh_observe.html">Configure and observe Service Mesh traffic</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../conclusion.html">Conclusion &amp; What&#8217;s Next</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Modern App Dev Roadshow - Cloud Architect Track for ARO</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Modern App Dev Roadshow - Cloud Architect Track for ARO</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Modern App Dev Roadshow - Cloud Architect Track for ARO</a></li>
+    <li><a href="lab_2_access_cluster.html">Access your ARO cluster</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///antora/content/modules/ROOT/pages/100-setup/lab_2_access_cluster.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<article class="doc">
+<div class="sect1">
+<h2 id="_access_the_openshift_console_and_cli"><a class="anchor" href="#_access_the_openshift_console_and_cli"></a>Access the OpenShift Console and CLI</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_login_to_the_openshift_web_console"><a class="anchor" href="#_login_to_the_openshift_web_console"></a>Login to the OpenShift Web Console</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Make sure your cluster is ready  by using the <code>aro show</code> extension to the <code>az</code> command. Use this command to check on the state of your ARO clusters.</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">az aro show \
+  --resource-group openenv-${GUID} \
+  --name aro-cluster-${GUID} \
+  --query "provisioningState" -o tsv</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-text hljs" data-lang="text">Succeeded</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>First, let&#8217;s configure your workshop environment with some helper variables to store key values of our cluster to make accessing it easier.
+To do so, let&#8217;s run the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">cat &lt;&lt; EOF &gt;&gt; ~/.workshoprc
+export OCP_PASS=$(az aro list-credentials --name \
+  aro-cluster-${GUID} --resource-group openenv-${GUID} \
+  --query="kubeadminPassword" -o tsv)
+
+export OCP_USER="kubeadmin"
+
+export OCP_CONSOLE="$(az aro show --name aro-cluster-${GUID} \
+  --resource-group openenv-${GUID} \
+  -o tsv --query consoleProfile)"
+
+export OCP_API="$(az aro show --name aro-cluster-${GUID} \
+  --resource-group openenv-${GUID} \
+  --query apiserverProfile.url -o tsv)"
+EOF
+
+source ~/.workshoprc
+
+echo "source ~/.workshoprc" &gt;&gt;~/.bashrc
+
+env | grep -E 'AZ_|OCP'</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-text hljs" data-lang="text">OCP_USER=kubeadmin
+OCP_API={aro_public_api_url}
+OCP_PASS={aro_kube_password}
+OCP_CONSOLE={aro_console}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To access the OpenShift CLI tools (<code>oc</code>) and web console you will need to retrieve your cluster credentials.
+The helper variables from above will make this simple!</p>
+<div class="paragraph">
+<p>To retrieve the credentials, run the following command:</p>
+</div>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">az aro list-credentials --name aro-cluster-${GUID} --resource-group openenv-${GUID}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-json hljs" data-lang="json">{
+  "kubeadminPassword": "{aro_kube_password}",
+  "kubeadminUsername": "kubeadmin"
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Next retrieve the console URL by running the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">az aro show --name aro-cluster-${GUID} --resource-group \
+  openenv-${GUID} -o tsv --query consoleProfile</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-text hljs" data-lang="text">{aro_console}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Finally, open the link to the console provided in a separate tab, and login with the provided credentials.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_login_to_the_openshift_cli"><a class="anchor" href="#_login_to_the_openshift_cli"></a>Login to the OpenShift CLI</h3>
+<div class="paragraph">
+<p>Now that you&#8217;re logged into the cluster&#8217;s console, return to your Azure Cloud Shell.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To login to the cluster using the OpenShift CLI tools (<code>oc</code>), first we need to retrieve the API server endpoint.
+To do so, run the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">az aro show -g openenv-${GUID} -n aro-cluster-${GUID} --query apiserverProfile.url -o tsv</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-text hljs" data-lang="text">{aro_public_api_url}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Now that we&#8217;ve captured the API server endpoint, we can login to the cluster by running the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">oc login "${OCP_API}" -u "${OCP_USER}" -p "${OCP_PASS}"</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-text hljs" data-lang="text">Login successful.
+
+You have access to 70 projects, the list has been suppressed. You can list all projects with
+'oc projects'
+
+Using project "default".</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Congratulations, you&#8217;re now logged into the cluster and ready to move on to the workshop content.</p>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="lab_1_environment.html" class="query-params-link">Explore the environment</a></span>
+  <span class="next"><a href="../200-ops/lab_1_cluster_upgrades.html" class="query-params-link">Upgrade your ARO cluster</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <a class="rhd-logo" href="https://developers.redhat.com" target="_blank"></div>
+</footer>
+<script src="../../_/js/vendor/clipboard.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

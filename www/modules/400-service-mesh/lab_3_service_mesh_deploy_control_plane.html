@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Modern App Dev Roadshow - Cloud Architect Track for ARO</title>
+    <link rel="prev" href="lab_2_service_mesh_deploy_operator.html">
+    <link rel="next" href="lab_4_service_mesh_deploy_app.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://developers.redhat.com" target="_blank"><img
+          src="../../_/img/header_logo.png" height="40px" alt="Red Hat Developer Program"></a>
+      <a class="navbar-item" href="../..">Modern App Dev Roadshow - Cloud Architect Track for ARO</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Books</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">CheatSheets</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">CheatSheet A</a>
+            <a class="navbar-item" href="#">CheatSheet B</a>
+            <a class="navbar-item" href="#">CheatSheet C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Upcoming Events</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Event A</a>
+            <a class="navbar-item" href="#">Event B</a>
+            <a class="navbar-item" href="#">Event C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">More Tutorials</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Tutorial A</a>
+            <a class="navbar-item" href="#">Tutorial B</a>
+            <a class="navbar-item" href="#">Tutorial C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="modules" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html" class=" query-params-link">Modern App Dev Roadshow - Cloud Architect Track for ARO</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../100-setup/lab_1_environment.html">Explore the environment</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../100-setup/lab_2_access_cluster.html">Access your ARO cluster</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_1_cluster_upgrades.html">Upgrade your ARO cluster</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_2_managing_worker_nodes.html">Managing Worker Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_3_autoscaling.html">Autoscale your ARO Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_4_labeling_nodes.html">Labeling your Worker Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_5_observability.html">Configure Red Hat OpenShift Logging with Azure Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../300-apps/lab_1_deploy_app.html">Deploy an application with Azure Database</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../300-apps/lab_2_openshift_gitops.html">Deploy an application with Red Hat OpenShift GitOps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../300-apps/lab_3_network_policy.html">Secure your applications with Network Policies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../300-apps/lab_4_resilient_app.html">Make your application resilient</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lab_1_service_mesh_introduction.html">Service Mesh Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lab_2_service_mesh_deploy_operator.html">Install Service Mesh Operator</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="lab_3_service_mesh_deploy_control_plane.html">Deploy Service Mesh Control Plane</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lab_4_service_mesh_deploy_app.html">Deploy a Service Mesh example application</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lab_5_service_mesh_weighted_routing.html">Set up Service Mesh Weighted Routing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lab_6_service_mesh_observe.html">Configure and observe Service Mesh traffic</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../conclusion.html">Conclusion &amp; What&#8217;s Next</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Modern App Dev Roadshow - Cloud Architect Track for ARO</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Modern App Dev Roadshow - Cloud Architect Track for ARO</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Modern App Dev Roadshow - Cloud Architect Track for ARO</a></li>
+    <li><a href="lab_3_service_mesh_deploy_control_plane.html">Deploy Service Mesh Control Plane</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///antora/content/modules/ROOT/pages/400-service-mesh/lab_3_service_mesh_deploy_control_plane.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<article class="doc">
+<div class="sect1">
+<h2 id="_deploy_control_plane"><a class="anchor" href="#_deploy_control_plane"></a>Deploy Control Plane</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Based on the open source Istio project, Red Hat OpenShift Service Mesh adds a transparent layer on existing distributed applications without requiring any changes to the service code.
+You add Red Hat OpenShift Service Mesh support to services by deploying a special sidecar proxy to relevant services in the mesh that intercepts all network communication between microservices.
+You configure and manage the Service Mesh using the Service Mesh control plane features.
+To learn more about the OpenShift Service Mesh, review the <a href="https://docs.openshift.com/rosa/service_mesh/v2x/ossm-about.html" target="_blank" rel="noopener">OpenShift documentation</a>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First, let&#8217;s create a project (namespace) for us to deploy the service mesh control plane into.
+To do so, run the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">oc new-project istio-system</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-text hljs" data-lang="text">Now using project "istio-system" on server "https://api.rosa-6n4s8.1c1c.p1.openshiftapps.com:6443".
+
+You can add applications to this project with the 'new-app' command. For example, try:
+
+    oc new-app rails-postgresql-example
+
+to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:
+
+    kubectl create deployment hello-node --image=k8s.gcr.io/e2e-test-images/agnhost:2.33 -- /agnhost serve-hostname</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Next, let&#8217;s deploy the service mesh control plane.
+To do so, run the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">cat &lt;&lt; EOF | oc apply -f -
+---
+apiVersion: maistra.io/v2
+kind: ServiceMeshControlPlane
+metadata:
+  name: basic
+  namespace: istio-system
+spec:
+  version: v2.2
+  security:
+    identity:
+      type: ThirdParty
+  tracing:
+    type: Jaeger
+    sampling: 10000
+  addons:
+    jaeger:
+      name: jaeger
+      install:
+        storage:
+          type: Memory
+    kiali:
+      enabled: true
+      name: kiali
+    grafana:
+      enabled: true
+EOF</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-text hljs" data-lang="text">servicemeshcontrolplane.maistra.io/basic created</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you receive an error that is similar to the below error, ensure your operators have finished installing and try again:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-texinfo hljs" data-lang="texinfo">Internal error occurred: failed calling webhook "smcp.mutation.maistra.io": failed to call webhook: Post "https://maistra-admission-controller.openshift-operators.svc:443/mutate-smcp?timeout=10s": dial tcp 10.128.2.63:11999: connect: connection refused</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Next, let&#8217;s watch the progress of the service mesh control plane rollout.
+To do so, run run the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">watch oc get pods -n istio-system</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-text hljs" data-lang="text">Every 2.0s: oc get pods -n istio-system                                                                                   bastion.6n4s8.internal: Wed Apr 19 22:43:25 2023
+
+NAME                                   READY   STATUS    RESTARTS   AGE
+grafana-5bb7dfcdc9-822b5               2/2     Running   0          2m26s
+istio-egressgateway-66488675c4-svskn   1/1     Running   0          2m27s
+istio-ingressgateway-6f8dd889f-q6p7z   1/1     Running   0          2m27s
+istiod-basic-877565cbf-tt9rt           1/1     Running   0          2m54s
+jaeger-85c5d7c6c4-fnbm2                2/2     Running   0          2m22s
+kiali-59956d7bb8-jzvnf                 1/1     Running   0          100s
+prometheus-7db5b74ddf-5dgw6            2/2     Running   0          2m41s
+wasm-cacher-basic-58894856d5-jhwvm     1/1     Running   0          2m8s</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once all the pods are running (like in the example above), hit Ctrl-C and proceed to the next step.</p>
+</div>
+</li>
+<li>
+<p>Next, let&#8217;s verify that the service mesh control plane is successfully installed.
+To do so, run the following command:</p>
+<div class="listingblock execute">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh">oc -n istio-system get smcp</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Sample Output</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-text hljs" data-lang="text">NAME    READY   STATUS            PROFILES      VERSION   AGE
+basic   10/10   ComponentsReady   ["default"]   2.2.6     3m18s</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The installation has finished successfully when the STATUS column says <code>ComponentsReady</code>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Congratulations!
+You&#8217;ve successfully deployed the OpenShift Service Mesh control plane to your cluster.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="lab_2_service_mesh_deploy_operator.html" class="query-params-link">Install Service Mesh Operator</a></span>
+  <span class="next"><a href="lab_4_service_mesh_deploy_app.html" class="query-params-link">Deploy a Service Mesh example application</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <a class="rhd-logo" href="https://developers.redhat.com" target="_blank"></div>
+</footer>
+<script src="../../_/js/vendor/clipboard.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

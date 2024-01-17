@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Red Hat Service Mesh :: Modern App Dev Roadshow - Cloud Architect Track for ARO</title>
+    <link rel="prev" href="../300-apps/lab_4_resilient_app.html">
+    <link rel="next" href="lab_2_service_mesh_deploy_operator.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://developers.redhat.com" target="_blank"><img
+          src="../../_/img/header_logo.png" height="40px" alt="Red Hat Developer Program"></a>
+      <a class="navbar-item" href="../..">Modern App Dev Roadshow - Cloud Architect Track for ARO</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Books</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">CheatSheets</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">CheatSheet A</a>
+            <a class="navbar-item" href="#">CheatSheet B</a>
+            <a class="navbar-item" href="#">CheatSheet C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Upcoming Events</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Event A</a>
+            <a class="navbar-item" href="#">Event B</a>
+            <a class="navbar-item" href="#">Event C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">More Tutorials</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Tutorial A</a>
+            <a class="navbar-item" href="#">Tutorial B</a>
+            <a class="navbar-item" href="#">Tutorial C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="modules" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html" class=" query-params-link">Modern App Dev Roadshow - Cloud Architect Track for ARO</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../100-setup/lab_1_environment.html">Explore the environment</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../100-setup/lab_2_access_cluster.html">Access your ARO cluster</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_1_cluster_upgrades.html">Upgrade your ARO cluster</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_2_managing_worker_nodes.html">Managing Worker Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_3_autoscaling.html">Autoscale your ARO Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_4_labeling_nodes.html">Labeling your Worker Nodes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../200-ops/lab_5_observability.html">Configure Red Hat OpenShift Logging with Azure Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../300-apps/lab_1_deploy_app.html">Deploy an application with Azure Database</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../300-apps/lab_2_openshift_gitops.html">Deploy an application with Red Hat OpenShift GitOps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../300-apps/lab_3_network_policy.html">Secure your applications with Network Policies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../300-apps/lab_4_resilient_app.html">Make your application resilient</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="lab_1_service_mesh_introduction.html">Service Mesh Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lab_2_service_mesh_deploy_operator.html">Install Service Mesh Operator</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lab_3_service_mesh_deploy_control_plane.html">Deploy Service Mesh Control Plane</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lab_4_service_mesh_deploy_app.html">Deploy a Service Mesh example application</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lab_5_service_mesh_weighted_routing.html">Set up Service Mesh Weighted Routing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="lab_6_service_mesh_observe.html">Configure and observe Service Mesh traffic</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../conclusion.html">Conclusion &amp; What&#8217;s Next</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Modern App Dev Roadshow - Cloud Architect Track for ARO</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Modern App Dev Roadshow - Cloud Architect Track for ARO</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Modern App Dev Roadshow - Cloud Architect Track for ARO</a></li>
+    <li><a href="lab_1_service_mesh_introduction.html">Service Mesh Introduction</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///antora/content/modules/ROOT/pages/400-service-mesh/lab_1_service_mesh_introduction.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Red Hat Service Mesh</h1>
+<div class="sect1">
+<h2 id="_what_is_red_hat_service_mesh"><a class="anchor" href="#_what_is_red_hat_service_mesh"></a>What is Red Hat Service Mesh?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As your applications evolve into collections of decentralized microservices, monitoring and managing the network communications and security among those multiple services becomes more challenging.</p>
+</div>
+<div class="paragraph">
+<p>Red Hat OpenShift Service Mesh is based on the open source project Istio.
+It provides a uniform way to connect, manage, and observe microservices based applications.
+It provides behavioral insight into and control of the networked microservices in your service mesh.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_red_hat_service_mesh"><a class="anchor" href="#_why_red_hat_service_mesh"></a>Why Red Hat Service Mesh?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Applications are changing from monoliths into collections of small, independent, and loosely coupled services often referred to as cloud-native applications.
+These services are organized in a microservices architecture.</p>
+</div>
+<div class="paragraph">
+<p>As a microservices architecture grows in size and complexity, it becomes more challenging to manage, analyze, and secure the communication between different services.
+This can be greatly simplified and optimized by using a service mesh to route requests from one service to another, and optimize how the different services interact with one another.</p>
+</div>
+<div class="paragraph">
+<p>With Red Hat OpenShift Service Mesh, you get a uniform way to connect, manage, and observe your microservices, without requiring you to redesign your applications. It adds a transparent layer on existing distributed applications with a sidecar proxy that intercepts network communication between microservices.</p>
+</div>
+<div class="paragraph">
+<p>OpenShift Service Mesh also provides integrated metrics, logging, and tracing, traditionally available only deep within the application or service.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_red_hat_service_mesh_benefits"><a class="anchor" href="#_red_hat_service_mesh_benefits"></a>Red Hat Service Mesh Benefits</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../_images/servicemeshp11.png" alt="service mesh benefits diagram">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ready_for_production"><a class="anchor" href="#_ready_for_production"></a>Ready for production</h3>
+<div class="paragraph">
+<p>Installs easily on Red Hat OpenShift, the hybrid cloud enterprise Kubernetes platform trusted by thousands of organizations around the globe.
+Red Hat OpenShift Service Mesh is pre-validated and fully supported to work on Red Hat OpenShift, straight out of the box.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security_focused"><a class="anchor" href="#_security_focused"></a>Security-focused</h3>
+<div class="paragraph">
+<p>Red Hat OpenShift Service Mesh provides comprehensive application networking security.
+This is achieved through transparent mTLS encryption and fine-grained policies that facilitate zero-trust networking.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_based_on_open_source"><a class="anchor" href="#_based_on_open_source"></a>Based on open source</h3>
+<div class="paragraph">
+<p>Based on the open source Istio project, Red Hat OpenShift Service Mesh provides additional functionality with the inclusion of other open source projects like Kiali (Istio console) and Jaeger (distributed tracing), which supports collaboration with leading members of the Istio community.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_cases"><a class="anchor" href="#_use_cases"></a>Use Cases</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Connectivity: Connect Traffic Flow, Blue/Green Deployments, Circuit Breaking, Virtual Services</p>
+</li>
+<li>
+<p>Security: Data-in-transit Encryption, Authentication, Authorization, Secure Naming</p>
+</li>
+<li>
+<p>Control: Configuration, Apply/Enforce Policies, Fair Resource Distribution</p>
+</li>
+<li>
+<p>Observability: Layer 7 Visibility, Monitoring, Logging, Distributed Tracing</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_difference_between_istio_and_red_hat_openshift_service_mesh"><a class="anchor" href="#_difference_between_istio_and_red_hat_openshift_service_mesh"></a>Difference Between Istio and Red Hat OpenShift Service Mesh</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>OpenShift Service Mesh installs a multi-tenant control plane by default</p>
+</li>
+<li>
+<p>OpenShift Service Mesh extends Role Based Access Control (RBAC) features</p>
+</li>
+<li>
+<p>OpenShift Service Mesh replaces BoringSSL with OpenSSL</p>
+</li>
+<li>
+<p>Kiali and Jaeger are enabled by default in OpenShift Service Mesh</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_the_advantage_of_choosing_red_hat_service_mesh"><a class="anchor" href="#_what_is_the_advantage_of_choosing_red_hat_service_mesh"></a>What is the advantage of choosing Red Hat Service Mesh?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Red Hat helps you get started faster because OpenShift Service Mesh is engineered to be ready for production.
+With OpenShift Service Mesh developers can increase productivity by integrating communication policies without changing application code or integrating language-specific libraries.</p>
+</div>
+<div class="paragraph">
+<p>OpenShift Service Mesh can also make things easier for operations because it installs easily on Red Hat OpenShift, has been tested with other Red Hat products, and comes with access to award-winning support.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="../300-apps/lab_4_resilient_app.html" class="query-params-link">Make your application resilient</a></span>
+  <span class="next"><a href="lab_2_service_mesh_deploy_operator.html" class="query-params-link">Install Service Mesh Operator</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <a class="rhd-logo" href="https://developers.redhat.com" target="_blank"></div>
+</footer>
+<script src="../../_/js/vendor/clipboard.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
