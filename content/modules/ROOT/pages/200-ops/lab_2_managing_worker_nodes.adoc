@@ -129,6 +129,8 @@ aro-cluster-lwqq8-8mkmr-worker-eastus2-m4dgh   Running       Standard_D4s_v3   e
 aro-cluster-lwqq8-8mkmr-worker-eastus3-k65k6   Running       Standard_D4s_v3   eastus   3      104m
 ----
 
+It may take some time for the machine to switch to the `running` state. It's ok to move to the next step before it does but if you want to see the full provisioning process add the `--watch` flag to the above command and wait for all Phases to show `Running`.
+
 === Via the Console
 
 Now let's scale the cluster back down to a total of 3 worker nodes, but this time, from the web console.

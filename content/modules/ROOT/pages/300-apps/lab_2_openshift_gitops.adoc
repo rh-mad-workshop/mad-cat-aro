@@ -182,7 +182,7 @@ https://bgd-bgd.apps.c90qz1cy.eastus.aroapp.io
 +
 image::bgd_green.png[]
 
-. Patch the OpenShift resource to force it to be out of sync with git
+. Patch the OpenShift resource to force it to be out of sync with git; we're changing the square to a new colour directly in the deployed code!
 +
 [source,sh,role=execute]
 ----
@@ -201,7 +201,7 @@ deployment.apps/bgd patched
 +
 image::app_blue.png[]
 
-. Meanwhile check ArgoCD it should show the application as out of sync.
+. Meanwhile check ArgoCD - it should show the application as out of sync.
 Click the *Sync* button and then click on *Synchronize* to have it revert the change you made in OpenShift
 +
 image::sync_bgd.png[]
