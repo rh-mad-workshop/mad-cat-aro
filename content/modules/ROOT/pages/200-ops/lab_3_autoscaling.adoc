@@ -230,7 +230,7 @@ oc -n openshift-machine-api get machinesets
 [source,text,options=nowrap]
 ----
 NAME                                     DESIRED   CURRENT   READY   AVAILABLE   AGE
-aro-cluster-lwqq8-8mkmr-worker-eastus1   3         3         1       1           111m
+aro-cluster-lwqq8-8mkmr-worker-eastus1   3         1         1       1           111m
 aro-cluster-lwqq8-8mkmr-worker-eastus2   1         1         1       1           111m
 aro-cluster-lwqq8-8mkmr-worker-eastus3   1         1         1       1           111m
 ----
@@ -240,7 +240,7 @@ aro-cluster-lwqq8-8mkmr-worker-eastus3   1         1         1       1          
 If you see READY and AVAILABLE at 1 still, don't panic! It can take a few minutes for the workers to instantiate. Try checking again after 3-5 minutes.
 ====
 +
-This shows that the cluster autoscaler is working on scaling the MachineSet up to 3.
+Thie "3" under the `DESIRED` column shows that the cluster autoscaler is working on scaling the MachineSet up to 3.
 
 . Now let's watch the cluster autoscaler create and delete machines as necessary.
 To do so, run the following command:
