@@ -99,7 +99,7 @@ helm version
 version.BuildInfo{Version:"v3.12.1+11.el8", GitCommit:"8cc4ba6fcc61d4c2ad2084c214dda40124bf5d32", GitTreeState:"clean", GoVersion:"go1.19.10"}
 ----
 
-. Next, let's add the MOBB Helm Chart repository. To do so, run the following command:
+. Next, let's add a Helm Chart repository to handle the installs. To do so, run the following command:
 +
 [source,sh,role=execute]
 ----
@@ -427,7 +427,7 @@ image::grafana-metrics.png[]
 If you don't see the graphs as in the screenshot above wait a minute and refresh the browser window - it takes a few minutes for the Grafana dashboard to start showing data.
 ====
 
-. Click the Explore (compass) Icon in the left hand menu, select "`Loki (Application)`" in the dropdown and search for `{kubernetes_namespace_name="custom-logging"}`. Click the blue *Run Query* button on the top right to execute the search.
+. Click the Explore (compass) Icon in the left hand menu, select "`Loki (Application)`" in the dropdown and search for `{kubernetes_namespace_name="custom-logging"}`. Click the blue *Run Query* button on the top right to execute the search. If you see a "bad gateway" error wait a few minutes (time for a coffee?) and refresh for the page to update.
 +
 image::grafana-logs.png[]
 
