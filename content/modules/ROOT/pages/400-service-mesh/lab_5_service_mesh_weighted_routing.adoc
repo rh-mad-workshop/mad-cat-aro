@@ -54,13 +54,13 @@ No problem, run the following command to get the product page URL:
 +
 [source,sh,role=execute]
 ----
-echo "http://$(oc -n istio-system get route istio-ingressgateway -o jsonpath='{.spec.host}')/productpage"
+echo "https://$(oc -n istio-system get route istio-ingressgateway -o jsonpath='{.spec.host}')/productpage"
 ----
 +
 .Sample Output
 [source,text,options=nowrap]
 ----
-http://istio-ingressgateway-istio-system.apps.rosa-6n4s8.1c1c.p1.openshiftapps.com/productpage
+https://istio-ingressgateway-istio-system.apps.rosa-6n4s8.1c1c.p1.openshiftapps.com/productpage
 ----
 
 == Summary 
