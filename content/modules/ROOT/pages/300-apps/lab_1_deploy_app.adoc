@@ -281,6 +281,12 @@ EOF
 servicemonitor.monitoring.coreos.com/microsweeper-monitor created
 ----
 
+. Patch the route to use TLS:
++
+----
+oc patch route -n microsweeper-ex microsweeper-appservice --patch='{"spec": {"tls": {"insecureEdgeTerminationPolicy": "Allow", "termination": "edge"}}}' --type=merge
+----
+
 . Change back to your previous working directory
 +
 [source,sh,role=execute]
@@ -378,19 +384,14 @@ You can also get the the URL for your application using the command line:
 
 [source,sh,role=execute]
 ----
-oc get route microsweeper-appservice -n microsweeper-ex -o jsonpath='{"http://"}{.spec.host}{"\n"}'
+oc get route microsweeper-appservice -n microsweeper-ex -o jsonpath='{"https://"}{.spec.host}{"\n"}'
 ----
 
 .Sample Output
 [source,text,options=nowrap]
 ----
-http://microsweeper-appservice-microsweeper-ex.apps.nbybk9f3.eastus.aroapp.io/
+https://microsweeper-appservice-microsweeper-ex.apps.nbybk9f3.eastus.aroapp.io/
 ----
-
-[WARNING]
-====
-This is an `http` route - some browsers automatically convert `http` to `https` which means the application will appear unavailable.
-====
 
 === View custom metrics for the App
 
