@@ -117,6 +117,13 @@ You may ignore the Warnings.
 Interested in seeing the configuration you're deploying?
 Check it out on GitHub https://github.com/rh-mobb/rosa-workshop-content/blob/main/rosa-content/assets/scripts/bookinfo.yaml[here,window=_blank].
 
+. Patch the route to use TLS:
++
+[source,sh,role=execute]
+----
+oc patch route -n istio-system istio-ingressgateway --patch='{"spec": {"tls": {"insecureEdgeTerminationPolicy": "Allow", "termination": "edge"}}}' --type=merge
+----
+
 . Now, let's create the service mesh ingress gateway.
 To do so, run the following command:
 +
@@ -180,13 +187,13 @@ To do so, run the following command:
 +
 [source,sh,role=execute]
 ----
-echo "http://$(oc -n istio-system get route istio-ingressgateway -o jsonpath='{.spec.host}')/productpage"
+echo "https://$(oc -n istio-system get route istio-ingressgateway -o jsonpath='{.spec.host}')/productpage"
 ----
 +
 .Sample Output
 [source,text,options=nowrap]
 ----
-http://istio-ingressgateway-istio-system.apps.rosa-6n4s8.1c1c.p1.openshiftapps.com/productpage
+https://istio-ingressgateway-istio-system.apps.rosa-6n4s8.1c1c.p1.openshiftapps.com/productpage
 ----
 
 . Copy and paste the URL provided in the previous step into your web browser and verify the Bookinfo product page is successfully deployed.
