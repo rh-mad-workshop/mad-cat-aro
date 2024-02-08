@@ -85,18 +85,18 @@ oc get pods -l app.kubernetes.io/name=microsweeper-appservice \
 [source,sh,role=execute]
 ----
 oc -n microsweeper-ex get route microsweeper-appservice \
-  -o jsonpath='http://{.spec.host}{"\n"}'
+  -o jsonpath='https://{.spec.host}{"\n"}'
 ----
 +
-Then visit the URL presented in a new tab in your web browser (using HTTP). For example, your output will look something similar to:
+Then visit the URL presented in a new tab in your web browser. For example, your output will look something similar to:
 +
 .Sample Output
 [source,text,options=nowrap]
 ----
-http://microsweeper-appservice-microsweeper-ex.apps.test-cluster.2ubs.p1.openshiftapps.com
+https://microsweeper-appservice-microsweeper-ex.apps.test-cluster.2ubs.p1.openshiftapps.com
 ----
 +
-In that case, you'd visit `+http://microsweeper-appservice-microsweeper-ex.apps.test-cluster.2ubs.p1.openshiftapps.com+` in your browser.
+In that case, you'd visit `+https://microsweeper-appservice-microsweeper-ex.apps.test-cluster.2ubs.p1.openshiftapps.com+` in your browser.
 
 . Initially, this application is deployed with only one pod. In the event a worker node goes down or the pod crashes, there will be an outage of the application. To prevent that, let's scale the number of instances of our applications up to three. To do so, run the following command:
 +
@@ -257,7 +257,7 @@ microsweeper-appservice-cpu   Deployment/microsweeper-appservice   0%/50%    2  
 ----
 sudo dnf -y install httpd-tools
 
-FRONTEND_URL=http://$(oc -n microsweeper-ex get route microsweeper-appservice -o jsonpath='{.spec.host}')/
+FRONTEND_URL=https://$(oc -n microsweeper-ex get route microsweeper-appservice -o jsonpath='{.spec.host}')/
 ab -c100 -n10000 ${FRONTEND_URL}
 ----
 
