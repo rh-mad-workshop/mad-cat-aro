@@ -285,6 +285,7 @@ servicemonitor.monitoring.coreos.com/microsweeper-monitor created
 
 . Patch the route to use TLS:
 +
+[source,sh,role=execute]
 ----
 oc patch route -n microsweeper-ex microsweeper-appservice --patch='{"spec": {"tls": {"insecureEdgeTerminationPolicy": "Allow", "termination": "edge"}}}' --type=merge
 ----
